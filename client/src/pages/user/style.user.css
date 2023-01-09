@@ -1,0 +1,11 @@
+main {
+  background-color: #f7f7f7;
+  margin: 0.5rem 2rem;
+  height: 87vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
