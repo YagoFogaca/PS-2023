@@ -1,0 +1,37 @@
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #3434c2;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+}
+
+nav {
+  width: 55%;
+  display: inherit;
+  justify-content: inherit;
+}
+
+ul {
+  width: 100%;
+  display: inherit;
+  justify-content: inherit;
+}
+
+nav li {
+  list-style: none;
+}
+
+li a {
+  font-size: 1.9rem;
+  color: #f0f0f0;
+  text-decoration: none;
+}
