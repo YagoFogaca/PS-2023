@@ -6,18 +6,32 @@ import './style.user.css';
 
 export function UserPage() {
   const [users, setUser] = useState<IUsersData[]>([]);
+  const [qntd_pag, setQntd_pag] = useState<string>('10');
+
   async function findAllUsers() {
-    const users = await userApi();
+    const users = await userApi(qntd_pag);
     console.log(users.results);
     setUser(users.results);
   }
 
   useEffect(() => {
     findAllUsers();
-  }, []);
+  }, [qntd_pag]);
 
   return (
     <main>
+      <form
+        className="form-pagUser"
+        onSubmit={event => {
+          event.preventDefault();
+          console.log(event.currentTarget.qntd_pag.value);
+          setQntd_pag(event.currentTarget.qntd_pag.value);
+        }}
+      >
+        <label htmlFor="">Quantidade por pagina</label>
+        <input type="text" id="qntd_pag" name="qntd_pag" />
+        <button>Buscar</button>
+      </form>
       {users.map((user, index) => {
         return (
           <CardUser
