@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header>
       <figure>
-        <img src="/logo.png" alt="" />
+        <img src="/logo.png" alt="" id="img-logo" />
       </figure>
       <nav>
         <ul>
